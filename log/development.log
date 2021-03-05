@@ -1,0 +1,2078 @@
+Started GET "/" for 172.21.0.1 at 2021-03-04 16:46:48 +0000
+Cannot render console from 172.21.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActiveRecord::NoDatabaseError (Unknown database 'app_development'):
+  
+activerecord (6.1.3) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `rescue in new_client'
+activerecord (6.1.3) lib/active_record/connection_adapters/mysql2_adapter.rb:39:in `new_client'
+activerecord (6.1.3) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (6.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.3) lib/active_record/connection_handling.rb:327:in `retrieve_connection'
+activerecord (6.1.3) lib/active_record/connection_handling.rb:283:in `connection'
+activerecord (6.1.3) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.3) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.3) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.3) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.3) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.3) lib/rails/engine.rb:539:in `call'
+puma (5.2.2) lib/puma/configuration.rb:248:in `call'
+puma (5.2.2) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.2) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.2) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.2) lib/puma/server.rb:431:in `process_client'
+puma (5.2.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE DATABASE `app_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE `app_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (25.9ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.5ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2021-03-04 16:54:39.691447', '2021-03-04 16:54:39.691447')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 172.22.0.1 at 2021-03-04 16:56:11 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.1.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.1.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.7ms | Allocations: 331)
+Completed 200 OK in 100ms (Views: 31.5ms | ActiveRecord: 0.0ms | Allocations: 5532)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateTodos (20210304171258)
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE TABLE `todos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `is_completed` tinyint(1) DEFAULT FALSE NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210304171258')[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodo Create (0.8ms)[0m  [1m[32mINSERT INTO `todos` (`name`, `created_at`, `updated_at`) VALUES ('Going around the world', '2021-03-04 17:17:02.082186', '2021-03-04 17:17:02.082186')[0m
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodo Create (1.2ms)[0m  [1m[32mINSERT INTO `todos` (`name`, `created_at`, `updated_at`) VALUES ('graduating from college', '2021-03-04 17:17:02.095211', '2021-03-04 17:17:02.095211')[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodo Create (0.6ms)[0m  [1m[32mINSERT INTO `todos` (`name`, `created_at`, `updated_at`) VALUES ('publishing a book', '2021-03-04 17:17:02.104859', '2021-03-04 17:17:02.104859')[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 172.22.0.1 at 2021-03-04 17:32:55 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/todos" for 172.22.0.1 at 2021-03-04 17:32:55 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 107)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: 90f5d069f06222647d25
+Version: webpack 4.46.0
+Time: 10066ms
+Built at: 03/04/2021 5:33:13 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9307f6f2b2e8f00a96b9.js    125 KiB  application  [emitted] [immutable]  application
+js/application-9307f6f2b2e8f00a96b9.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9307f6f2b2e8f00a96b9.js js/application-9307f6f2b2e8f00a96b9.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 494 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 17920.4ms | Allocations: 12356)
+Completed 200 OK in 17926ms (Views: 17924.7ms | ActiveRecord: 0.0ms | Allocations: 13456)
+
+
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE DATABASE `app_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE `app_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/todos" for 172.22.0.1 at 2021-03-04 17:40:07 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 98)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: 86ebabe8ba25c9d442cd
+Version: webpack 4.46.0
+Time: 11630ms
+Built at: 03/04/2021 5:40:24 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-5bf8b37c037f9333658f.js  1.34 MiB       application  [emitted] [immutable]  application
+     js/application-5bf8b37c037f9333658f.js.map  1.55 MiB       application  [emitted] [dev]        application
+               js/index-055956a21802204a606d.js   1.1 MiB             index  [emitted] [immutable]  index
+           js/index-055956a21802204a606d.js.map  1.27 MiB             index  [emitted] [dev]        index
+    js/server_rendering-482f566946d0aad36086.js  1.23 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-482f566946d0aad36086.js.map  1.42 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-5bf8b37c037f9333658f.js js/application-5bf8b37c037f9333658f.js.map
+Entrypoint index = js/index-055956a21802204a606d.js js/index-055956a21802204a606d.js.map
+Entrypoint server_rendering = js/server_rendering-482f566946d0aad36086.js js/server_rendering-482f566946d0aad36086.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 160 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 1.03 KiB {index} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 30 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17532.9ms | Allocations: 6789)
+Completed 200 OK in 17544ms (Views: 17539.9ms | Allocations: 7938)
+
+
+Started GET "/todos" for 172.22.0.1 at 2021-03-04 17:52:35 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: 638e0e2dd473588f702d
+Version: webpack 4.46.0
+Time: 15726ms
+Built at: 03/04/2021 5:52:58 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-4c120974f7040320563c.js  1.36 MiB       application  [emitted] [immutable]  application
+     js/application-4c120974f7040320563c.js.map  1.56 MiB       application  [emitted] [dev]        application
+               js/index-2c94508a04421e8511ab.js  1.21 MiB             index  [emitted] [immutable]  index
+           js/index-2c94508a04421e8511ab.js.map  1.37 MiB             index  [emitted] [dev]        index
+    js/server_rendering-6ec96668b7df68512bfa.js  1.24 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-6ec96668b7df68512bfa.js.map  1.43 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-4c120974f7040320563c.js js/application-4c120974f7040320563c.js.map
+Entrypoint index = js/index-2c94508a04421e8511ab.js js/index-2c94508a04421e8511ab.js.map
+Entrypoint server_rendering = js/server_rendering-6ec96668b7df68512bfa.js js/server_rendering-6ec96668b7df68512bfa.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 53 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23733.6ms | Allocations: 6732)
+Completed 200 OK in 23738ms (Views: 23737.0ms | Allocations: 7283)
+
+
+Started GET "/todos" for 172.22.0.1 at 2021-03-04 18:32:23 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: a1a3a4d692d1cea6e88e
+Version: webpack 4.46.0
+Time: 15602ms
+Built at: 03/04/2021 6:32:45 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-6a2de173ad2ee24848da.js  1.44 MiB       application  [emitted] [immutable]  application
+     js/application-6a2de173ad2ee24848da.js.map  1.65 MiB       application  [emitted] [dev]        application
+               js/index-f14ccc5875cef8af331c.js   1.3 MiB             index  [emitted] [immutable]  index
+           js/index-f14ccc5875cef8af331c.js.map  1.46 MiB             index  [emitted] [dev]        index
+    js/server_rendering-81632ad271c2afddc4ed.js  1.33 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-81632ad271c2afddc4ed.js.map  1.52 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-6a2de173ad2ee24848da.js js/application-6a2de173ad2ee24848da.js.map
+Entrypoint index = js/index-f14ccc5875cef8af331c.js js/index-f14ccc5875cef8af331c.js.map
+Entrypoint server_rendering = js/server_rendering-81632ad271c2afddc4ed.js js/server_rendering-81632ad271c2afddc4ed.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 60 hidden modules
+
+ERROR in ./app/javascript/components/App.js
+Module not found: Error: Can't resolve 'react-route-dom' in '/app/app/javascript/components'
+ @ ./app/javascript/components/App.js 10:0-54 50:38-42 65:38-42
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22191.8ms | Allocations: 6645)
+Completed 200 OK in 22196ms (Views: 22195.2ms | Allocations: 7199)
+
+
+Started GET "/todos" for 172.22.0.1 at 2021-03-04 18:32:56 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 33)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 78.2ms | Allocations: 5565)
+Completed 200 OK in 81ms (Views: 80.5ms | Allocations: 5945)
+
+
+Started GET "/todos" for 172.22.0.1 at 2021-03-04 18:34:10 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: 46c84d9526b38674f509
+Version: webpack 4.46.0
+Time: 12480ms
+Built at: 03/04/2021 6:34:28 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-7b76e2df9d34471c388f.js  1.58 MiB       application  [emitted] [immutable]  application
+     js/application-7b76e2df9d34471c388f.js.map  1.78 MiB       application  [emitted] [dev]        application
+               js/index-0658d6c60ab35d77f669.js   1.3 MiB             index  [emitted] [immutable]  index
+           js/index-0658d6c60ab35d77f669.js.map  1.46 MiB             index  [emitted] [dev]        index
+    js/server_rendering-96a0a768df82cc83ab4f.js  1.46 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-96a0a768df82cc83ab4f.js.map  1.65 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-7b76e2df9d34471c388f.js js/application-7b76e2df9d34471c388f.js.map
+Entrypoint index = js/index-0658d6c60ab35d77f669.js js/index-0658d6c60ab35d77f669.js.map
+Entrypoint server_rendering = js/server_rendering-96a0a768df82cc83ab4f.js js/server_rendering-96a0a768df82cc83ab4f.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 60 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18256.4ms | Allocations: 6709)
+Completed 200 OK in 18261ms (Views: 18259.7ms | Allocations: 7254)
+
+
+Started GET "/todos" for 172.22.0.1 at 2021-03-04 18:37:20 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: ad678cc1c4e29c5ac62a
+Version: webpack 4.46.0
+Time: 13154ms
+Built at: 03/04/2021 6:37:39 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-fb2ebcc48872c263b6e5.js  1.44 MiB       application  [emitted] [immutable]  application
+     js/application-fb2ebcc48872c263b6e5.js.map  1.65 MiB       application  [emitted] [dev]        application
+               js/index-ed88d69e8b9751c887fd.js   1.3 MiB             index  [emitted] [immutable]  index
+           js/index-ed88d69e8b9751c887fd.js.map  1.46 MiB             index  [emitted] [dev]        index
+    js/server_rendering-5ca73c51dcdfae5f50b1.js  1.33 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-5ca73c51dcdfae5f50b1.js.map  1.52 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-fb2ebcc48872c263b6e5.js js/application-fb2ebcc48872c263b6e5.js.map
+Entrypoint index = js/index-ed88d69e8b9751c887fd.js js/index-ed88d69e8b9751c887fd.js.map
+Entrypoint server_rendering = js/server_rendering-5ca73c51dcdfae5f50b1.js js/server_rendering-5ca73c51dcdfae5f50b1.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 60 hidden modules
+
+ERROR in ./app/javascript/components/App.js
+Module not found: Error: Can't resolve 'react-route-dom' in '/app/app/javascript/components'
+ @ ./app/javascript/components/App.js 10:0-54 50:38-42 65:38-42
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18894.7ms | Allocations: 6631)
+Completed 200 OK in 18903ms (Views: 18901.3ms | Allocations: 7176)
+
+
+Started GET "/todos" for 172.22.0.1 at 2021-03-04 18:38:54 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: 0a78759f501971602f21
+Version: webpack 4.46.0
+Time: 12919ms
+Built at: 03/04/2021 6:39:12 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-da4b4d23d0ff6960bc9f.js  1.44 MiB       application  [emitted] [immutable]  application
+     js/application-da4b4d23d0ff6960bc9f.js.map  1.65 MiB       application  [emitted] [dev]        application
+               js/index-83fba385e4246270214a.js   1.3 MiB             index  [emitted] [immutable]  index
+           js/index-83fba385e4246270214a.js.map  1.46 MiB             index  [emitted] [dev]        index
+    js/server_rendering-0ce1e965ab674212a5aa.js  1.33 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-0ce1e965ab674212a5aa.js.map  1.52 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-da4b4d23d0ff6960bc9f.js js/application-da4b4d23d0ff6960bc9f.js.map
+Entrypoint index = js/index-83fba385e4246270214a.js js/index-83fba385e4246270214a.js.map
+Entrypoint server_rendering = js/server_rendering-0ce1e965ab674212a5aa.js js/server_rendering-0ce1e965ab674212a5aa.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 60 hidden modules
+
+ERROR in ./app/javascript/components/App.js
+Module not found: Error: Can't resolve 'react-route-dom' in '/app/app/javascript/components'
+ @ ./app/javascript/components/App.js 11:0-54 52:38-42 67:38-42
+ @ ./app/javascript/components sync ^\.\/.*$
+ @ ./app/javascript/packs/application.js
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18618.6ms | Allocations: 6652)
+Completed 200 OK in 18624ms (Views: 18622.5ms | Allocations: 7205)
+
+
+Started GET "/todos" for 172.22.0.1 at 2021-03-04 18:41:01 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: 92dfeef1a3432be1f586
+Version: webpack 4.46.0
+Time: 13484ms
+Built at: 03/04/2021 6:41:20 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-599359c02ea483b6c2f0.js  1.58 MiB       application  [emitted] [immutable]  application
+     js/application-599359c02ea483b6c2f0.js.map  1.78 MiB       application  [emitted] [dev]        application
+               js/index-30a8a3de4086e0fc9cb9.js   1.3 MiB             index  [emitted] [immutable]  index
+           js/index-30a8a3de4086e0fc9cb9.js.map  1.46 MiB             index  [emitted] [dev]        index
+    js/server_rendering-2ce616527ec1fc53f7d9.js  1.46 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-2ce616527ec1fc53f7d9.js.map  1.65 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-599359c02ea483b6c2f0.js js/application-599359c02ea483b6c2f0.js.map
+Entrypoint index = js/index-30a8a3de4086e0fc9cb9.js js/index-30a8a3de4086e0fc9cb9.js.map
+Entrypoint server_rendering = js/server_rendering-2ce616527ec1fc53f7d9.js js/server_rendering-2ce616527ec1fc53f7d9.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 60 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19115.9ms | Allocations: 6715)
+Completed 200 OK in 19120ms (Views: 19119.5ms | Allocations: 7260)
+
+
+Started GET "/todos" for 172.22.0.1 at 2021-03-04 18:43:30 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: 45674a5485722e20e057
+Version: webpack 4.46.0
+Time: 13544ms
+Built at: 03/04/2021 6:43:50 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-0e7a668badcaf4bd68cc.js  1.58 MiB       application  [emitted] [immutable]  application
+     js/application-0e7a668badcaf4bd68cc.js.map  1.78 MiB       application  [emitted] [dev]        application
+               js/index-984f5d1925ef26ae0716.js   1.3 MiB             index  [emitted] [immutable]  index
+           js/index-984f5d1925ef26ae0716.js.map  1.46 MiB             index  [emitted] [dev]        index
+    js/server_rendering-3d99ff561abff4885208.js  1.46 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-3d99ff561abff4885208.js.map  1.65 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-0e7a668badcaf4bd68cc.js js/application-0e7a668badcaf4bd68cc.js.map
+Entrypoint index = js/index-984f5d1925ef26ae0716.js js/index-984f5d1925ef26ae0716.js.map
+Entrypoint server_rendering = js/server_rendering-3d99ff561abff4885208.js js/server_rendering-3d99ff561abff4885208.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 60 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19540.8ms | Allocations: 6712)
+Completed 200 OK in 19544ms (Views: 19543.4ms | Allocations: 7257)
+
+
+Started GET "/todos" for 172.22.0.1 at 2021-03-04 18:59:39 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: d6009bcdd3c5eb4fe495
+Version: webpack 4.46.0
+Time: 13630ms
+Built at: 03/04/2021 6:59:59 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-5e9386f6223ca1734552.js  1.58 MiB       application  [emitted] [immutable]  application
+     js/application-5e9386f6223ca1734552.js.map  1.78 MiB       application  [emitted] [dev]        application
+               js/index-8babd7878961884b3ee5.js   1.3 MiB             index  [emitted] [immutable]  index
+           js/index-8babd7878961884b3ee5.js.map  1.46 MiB             index  [emitted] [dev]        index
+    js/server_rendering-41cd5c49d365e1b4e190.js  1.46 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-41cd5c49d365e1b4e190.js.map  1.65 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-5e9386f6223ca1734552.js js/application-5e9386f6223ca1734552.js.map
+Entrypoint index = js/index-8babd7878961884b3ee5.js js/index-8babd7878961884b3ee5.js.map
+Entrypoint server_rendering = js/server_rendering-41cd5c49d365e1b4e190.js js/server_rendering-41cd5c49d365e1b4e190.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 60 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19927.6ms | Allocations: 6717)
+Completed 200 OK in 19933ms (Views: 19931.7ms | Allocations: 7267)
+
+
+Started GET "/todos" for 172.22.0.1 at 2021-03-04 19:23:57 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: 8b380cd04297b5dfd379
+Version: webpack 4.46.0
+Time: 17388ms
+Built at: 03/04/2021 7:24:20 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-1fe0345821c17e3e33e2.js  2.92 MiB       application  [emitted] [immutable]  application
+     js/application-1fe0345821c17e3e33e2.js.map  3.07 MiB       application  [emitted] [dev]        application
+               js/index-5ce63e556b95f45b6c1f.js  2.64 MiB             index  [emitted] [immutable]  index
+           js/index-5ce63e556b95f45b6c1f.js.map  2.75 MiB             index  [emitted] [dev]        index
+    js/server_rendering-36e98d2efeb1c059e38d.js  2.81 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-36e98d2efeb1c059e38d.js.map  2.94 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-1fe0345821c17e3e33e2.js js/application-1fe0345821c17e3e33e2.js.map
+Entrypoint index = js/index-5ce63e556b95f45b6c1f.js js/index-5ce63e556b95f45b6c1f.js.map
+Entrypoint server_rendering = js/server_rendering-36e98d2efeb1c059e38d.js js/server_rendering-36e98d2efeb1c059e38d.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 93 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23314.3ms | Allocations: 6866)
+Completed 200 OK in 23320ms (Views: 23318.7ms | Allocations: 7416)
+
+
+Started GET "/todos" for 172.22.0.1 at 2021-03-04 19:24:32 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 33)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 87.4ms | Allocations: 5564)
+Completed 200 OK in 91ms (Views: 90.2ms | Allocations: 5944)
+
+
+Started GET "/todos/" for 172.22.0.1 at 2021-03-04 19:24:43 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 33)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 83.7ms | Allocations: 5570)
+Completed 200 OK in 93ms (Views: 87.0ms | Allocations: 5955)
+
+
+Started GET "/todos/" for 172.22.0.1 at 2021-03-04 19:25:38 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: cd4dc6c79db135d0b0c3
+Version: webpack 4.46.0
+Time: 14153ms
+Built at: 03/04/2021 7:25:58 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-74a9ce7f78a63cef01a1.js  2.92 MiB       application  [emitted] [immutable]  application
+     js/application-74a9ce7f78a63cef01a1.js.map  3.07 MiB       application  [emitted] [dev]        application
+               js/index-13651a2c2f9d2a4bc34a.js  2.64 MiB             index  [emitted] [immutable]  index
+           js/index-13651a2c2f9d2a4bc34a.js.map  2.75 MiB             index  [emitted] [dev]        index
+    js/server_rendering-24789de51d359781f49a.js  2.81 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-24789de51d359781f49a.js.map  2.94 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-74a9ce7f78a63cef01a1.js js/application-74a9ce7f78a63cef01a1.js.map
+Entrypoint index = js/index-13651a2c2f9d2a4bc34a.js js/index-13651a2c2f9d2a4bc34a.js.map
+Entrypoint server_rendering = js/server_rendering-24789de51d359781f49a.js js/server_rendering-24789de51d359781f49a.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 93 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19905.4ms | Allocations: 6711)
+Completed 200 OK in 19910ms (Views: 19909.0ms | Allocations: 7256)
+
+
+Started GET "/todos/" for 172.22.0.1 at 2021-03-04 19:26:15 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: e8b143ee5e52c36699d9
+Version: webpack 4.46.0
+Time: 14818ms
+Built at: 03/04/2021 7:26:36 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-a9c58d62744c6d9a0f40.js  2.92 MiB       application  [emitted] [immutable]  application
+     js/application-a9c58d62744c6d9a0f40.js.map  3.07 MiB       application  [emitted] [dev]        application
+               js/index-c86f9f5ef2454c3b472f.js  2.64 MiB             index  [emitted] [immutable]  index
+           js/index-c86f9f5ef2454c3b472f.js.map  2.75 MiB             index  [emitted] [dev]        index
+    js/server_rendering-03cabaf9aa425adf35c2.js  2.81 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-03cabaf9aa425adf35c2.js.map  2.94 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-a9c58d62744c6d9a0f40.js js/application-a9c58d62744c6d9a0f40.js.map
+Entrypoint index = js/index-c86f9f5ef2454c3b472f.js js/index-c86f9f5ef2454c3b472f.js.map
+Entrypoint server_rendering = js/server_rendering-03cabaf9aa425adf35c2.js js/server_rendering-03cabaf9aa425adf35c2.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 93 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21713.2ms | Allocations: 6784)
+Completed 200 OK in 21717ms (Views: 21716.3ms | Allocations: 7329)
+
+
+Started GET "/todos/" for 172.22.0.1 at 2021-03-04 19:26:59 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: d7f76644cae8d12f729f
+Version: webpack 4.46.0
+Time: 14184ms
+Built at: 03/04/2021 7:27:19 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-1b903cff866c4693492b.js  2.92 MiB       application  [emitted] [immutable]  application
+     js/application-1b903cff866c4693492b.js.map  3.07 MiB       application  [emitted] [dev]        application
+               js/index-426b0d061de29ef553c2.js  2.64 MiB             index  [emitted] [immutable]  index
+           js/index-426b0d061de29ef553c2.js.map  2.75 MiB             index  [emitted] [dev]        index
+    js/server_rendering-5532baf95ca828099e28.js  2.81 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-5532baf95ca828099e28.js.map  2.94 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-1b903cff866c4693492b.js js/application-1b903cff866c4693492b.js.map
+Entrypoint index = js/index-426b0d061de29ef553c2.js js/index-426b0d061de29ef553c2.js.map
+Entrypoint server_rendering = js/server_rendering-5532baf95ca828099e28.js js/server_rendering-5532baf95ca828099e28.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 93 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20349.4ms | Allocations: 6730)
+Completed 200 OK in 20354ms (Views: 20353.3ms | Allocations: 7280)
+
+
+Started GET "/todos/" for 172.22.0.1 at 2021-03-04 19:28:03 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: 2c785c83594b1342e30d
+Version: webpack 4.46.0
+Time: 12518ms
+Built at: 03/04/2021 7:28:21 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-d2164a1891bdaccb6a84.js  1.58 MiB       application  [emitted] [immutable]  application
+     js/application-d2164a1891bdaccb6a84.js.map  1.78 MiB       application  [emitted] [dev]        application
+               js/index-0942c0400d408751995b.js   1.3 MiB             index  [emitted] [immutable]  index
+           js/index-0942c0400d408751995b.js.map  1.46 MiB             index  [emitted] [dev]        index
+    js/server_rendering-d8a54ec6ac01b1e7879b.js  1.47 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-d8a54ec6ac01b1e7879b.js.map  1.65 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-d2164a1891bdaccb6a84.js js/application-d2164a1891bdaccb6a84.js.map
+Entrypoint index = js/index-0942c0400d408751995b.js js/index-0942c0400d408751995b.js.map
+Entrypoint server_rendering = js/server_rendering-d8a54ec6ac01b1e7879b.js js/server_rendering-d8a54ec6ac01b1e7879b.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 60 hidden modules
+
+WARNING in ./app/javascript/components/TodoList.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: /app/app/javascript/components/TodoList.js: Unexpected token (89:3)
+
+  87 |       cleanup
+  88 |     }
+> 89 |   }, [input])
+     |    ^
+  90 |
+  91 |   return (
+  92 |     <div>
+    at Object._raise (/app/node_modules/@babel/parser/lib/index.js:776:17)
+    at Object.raiseWithData (/app/node_modules/@babel/parser/lib/index.js:769:17)
+    at Object.raise (/app/node_modules/@babel/parser/lib/index.js:737:17)
+    at Object.unexpected (/app/node_modules/@babel/parser/lib/index.js:9668:16)
+    at Object.parseExprAtom (/app/node_modules/@babel/parser/lib/index.js:11060:20)
+    at Object.parseExprAtom (/app/node_modules/@babel/parser/lib/index.js:5174:20)
+    at Object.parseExprSubscripts (/app/node_modules/@babel/parser/lib/index.js:10637:23)
+    at Object.parseUpdate (/app/node_modules/@babel/parser/lib/index.js:10617:21)
+    at Object.parseMaybeUnary (/app/node_modules/@babel/parser/lib/index.js:10595:23)
+    at Object.parseExprOps (/app/node_modules/@babel/parser/lib/index.js:10456:23)
+    at Object.parseMaybeConditional (/app/node_modules/@babel/parser/lib/index.js:10430:23)
+    at Object.parseMaybeAssign (/app/node_modules/@babel/parser/lib/index.js:10393:21)
+    at Object.parseExpressionBase (/app/node_modules/@babel/parser/lib/index.js:10338:23)
+    at allowInAnd (/app/node_modules/@babel/parser/lib/index.js:10332:39)
+    at Object.allowInAnd (/app/node_modules/@babel/parser/lib/index.js:12027:16)
+    at Object.parseExpression (/app/node_modules/@babel/parser/lib/index.js:10332:17)
+    at Object.parseStatementContent (/app/node_modules/@babel/parser/lib/index.js:12315:23)
+    at Object.parseStatement (/app/node_modules/@babel/parser/lib/index.js:12184:17)
+    at Object.parseBlockOrModuleBlockBody (/app/node_modules/@babel/parser/lib/index.js:12764:25)
+    at Object.parseBlockBody (/app/node_modules/@babel/parser/lib/index.js:12755:10)
+    at Object.parseProgram (/app/node_modules/@babel/parser/lib/index.js:12119:10)
+    at Object.parseTopLevel (/app/node_modules/@babel/parser/lib/index.js:12110:25)
+    at Object.parse (/app/node_modules/@babel/parser/lib/index.js:13818:10)
+    at parse (/app/node_modules/@babel/parser/lib/index.js:13870:38)
+    at parser (/app/node_modules/@babel/core/lib/parser/index.js:54:34)
+    at parser.next (<anonymous>)
+    at normalizeFile (/app/node_modules/@babel/core/lib/transformation/normalize-file.js:99:38)
+    at normalizeFile.next (<anonymous>)
+    at run (/app/node_modules/@babel/core/lib/transformation/index.js:31:50)
+    at run.next (<anonymous>)
+ @ ./app/javascript/components sync ^\.\/.*$ ./TodoList.js
+ @ ./app/javascript/packs/application.js
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18136.3ms | Allocations: 6708)
+Completed 200 OK in 18140ms (Views: 18139.2ms | Allocations: 7258)
+
+
+Started GET "/todos/" for 172.22.0.1 at 2021-03-04 19:29:13 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: a5131528690fe4429a98
+Version: webpack 4.46.0
+Time: 14664ms
+Built at: 03/04/2021 7:29:34 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-297a00a8fe551c9313f7.js  2.92 MiB       application  [emitted] [immutable]  application
+     js/application-297a00a8fe551c9313f7.js.map  3.07 MiB       application  [emitted] [dev]        application
+               js/index-7d81a8bdc18e74037117.js  2.64 MiB             index  [emitted] [immutable]  index
+           js/index-7d81a8bdc18e74037117.js.map  2.75 MiB             index  [emitted] [dev]        index
+    js/server_rendering-742a24f8cdec1545dc52.js  2.81 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-742a24f8cdec1545dc52.js.map  2.94 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-297a00a8fe551c9313f7.js js/application-297a00a8fe551c9313f7.js.map
+Entrypoint index = js/index-7d81a8bdc18e74037117.js js/index-7d81a8bdc18e74037117.js.map
+Entrypoint server_rendering = js/server_rendering-742a24f8cdec1545dc52.js js/server_rendering-742a24f8cdec1545dc52.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 93 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21174.3ms | Allocations: 6715)
+Completed 200 OK in 21179ms (Views: 21177.8ms | Allocations: 7260)
+
+
+Started GET "/api/v1/todos.json" for 172.22.0.1 at 2021-03-04 19:29:35 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#index as JSON
+  [1m[36mTodo Load (3.1ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 71ms (Views: 15.4ms | ActiveRecord: 13.2ms | Allocations: 7378)
+
+
+Started GET "/weight_histories/1/edit" for 172.22.0.1 at 2021-03-04 20:11:16 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/weight_histories/1/edit"):
+  
+Started GET "/todos/" for 172.22.0.1 at 2021-03-04 20:25:13 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: e5ff8a57b4233eed55a2
+Version: webpack 4.46.0
+Time: 17423ms
+Built at: 03/04/2021 8:25:37 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-5d91181589fd1c917410.js  2.93 MiB       application  [emitted] [immutable]  application
+     js/application-5d91181589fd1c917410.js.map  3.07 MiB       application  [emitted] [dev]        application
+               js/index-0541dcd5d70088a0016b.js  2.64 MiB             index  [emitted] [immutable]  index
+           js/index-0541dcd5d70088a0016b.js.map  2.75 MiB             index  [emitted] [dev]        index
+    js/server_rendering-45372b5cbf4691c5a4e5.js  2.81 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-45372b5cbf4691c5a4e5.js.map  2.94 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-5d91181589fd1c917410.js js/application-5d91181589fd1c917410.js.map
+Entrypoint index = js/index-0541dcd5d70088a0016b.js js/index-0541dcd5d70088a0016b.js.map
+Entrypoint server_rendering = js/server_rendering-45372b5cbf4691c5a4e5.js js/server_rendering-45372b5cbf4691c5a4e5.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 93 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25037.9ms | Allocations: 6867)
+Completed 200 OK in 25042ms (Views: 25041.3ms | Allocations: 7493)
+
+
+Started GET "/api/v1/todos.json" for 172.22.0.1 at 2021-03-04 20:25:39 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#index as JSON
+  [1m[36mTodo Load (2.3ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 52ms (Views: 24.3ms | ActiveRecord: 5.1ms | Allocations: 4620)
+
+
+Started GET "/todos/" for 172.22.0.1 at 2021-03-04 20:38:15 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: 280f9eb0859e53273c90
+Version: webpack 4.46.0
+Time: 15190ms
+Built at: 03/04/2021 8:38:36 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-d4353361b3b4cec96f73.js  2.93 MiB       application  [emitted] [immutable]  application
+     js/application-d4353361b3b4cec96f73.js.map  3.07 MiB       application  [emitted] [dev]        application
+               js/index-78406b0f9884bf8ff282.js  2.64 MiB             index  [emitted] [immutable]  index
+           js/index-78406b0f9884bf8ff282.js.map  2.75 MiB             index  [emitted] [dev]        index
+    js/server_rendering-abe539537cb9d16c4fb7.js  2.81 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-abe539537cb9d16c4fb7.js.map  2.94 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-d4353361b3b4cec96f73.js js/application-d4353361b3b4cec96f73.js.map
+Entrypoint index = js/index-78406b0f9884bf8ff282.js js/index-78406b0f9884bf8ff282.js.map
+Entrypoint server_rendering = js/server_rendering-abe539537cb9d16c4fb7.js js/server_rendering-abe539537cb9d16c4fb7.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 93 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21458.0ms | Allocations: 6722)
+Completed 200 OK in 21463ms (Views: 21461.7ms | Allocations: 7272)
+
+
+Started GET "/api/v1/todos.json" for 172.22.0.1 at 2021-03-04 20:38:37 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#index as JSON
+  [1m[36mTodo Load (2.5ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 34ms (Views: 12.1ms | ActiveRecord: 4.3ms | Allocations: 4380)
+
+
+Started GET "/todos/" for 172.22.0.1 at 2021-03-04 20:44:59 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: 42c437cc8fca783f0e45
+Version: webpack 4.46.0
+Time: 14871ms
+Built at: 03/04/2021 8:45:20 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-926d816b7a80a8f745a4.js  2.93 MiB       application  [emitted] [immutable]  application
+     js/application-926d816b7a80a8f745a4.js.map  3.07 MiB       application  [emitted] [dev]        application
+               js/index-272d0291e62c6949bbfc.js  2.65 MiB             index  [emitted] [immutable]  index
+           js/index-272d0291e62c6949bbfc.js.map  2.75 MiB             index  [emitted] [dev]        index
+    js/server_rendering-ad5d691eed1a92d561a2.js  2.81 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-ad5d691eed1a92d561a2.js.map  2.94 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-926d816b7a80a8f745a4.js js/application-926d816b7a80a8f745a4.js.map
+Entrypoint index = js/index-272d0291e62c6949bbfc.js js/index-272d0291e62c6949bbfc.js.map
+Entrypoint server_rendering = js/server_rendering-ad5d691eed1a92d561a2.js js/server_rendering-ad5d691eed1a92d561a2.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 93 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21078.2ms | Allocations: 6718)
+Completed 200 OK in 21082ms (Views: 21081.2ms | Allocations: 7268)
+
+
+Started GET "/api/v1/todos.json" for 172.22.0.1 at 2021-03-04 20:45:21 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#index as JSON
+  [1m[36mTodo Load (2.3ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 10.4ms | ActiveRecord: 3.4ms | Allocations: 4364)
+
+
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 20:45:43 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 18ms (ActiveRecord: 0.0ms | Allocations: 2725)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 20:45:44 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 5ms (ActiveRecord: 0.0ms | Allocations: 733)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 20:45:45 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 3ms (ActiveRecord: 0.0ms | Allocations: 733)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 20:45:46 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 4ms (ActiveRecord: 0.0ms | Allocations: 733)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 20:45:46 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 4ms (ActiveRecord: 0.0ms | Allocations: 731)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 20:45:47 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 4ms (ActiveRecord: 0.0ms | Allocations: 733)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 20:45:53 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 4ms (ActiveRecord: 0.0ms | Allocations: 733)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started GET "/api/v1/todos.json" for 172.22.0.1 at 2021-03-04 20:45:57 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#index as JSON
+  [1m[36mTodo Load (2.0ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 2.0ms | Allocations: 1214)
+
+
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 20:45:58 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 4ms (ActiveRecord: 0.0ms | Allocations: 733)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 20:52:35 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 3ms (Allocations: 733)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 20:52:35 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 4ms (Allocations: 733)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 20:52:35 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 4ms (Allocations: 731)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 20:52:36 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 3ms (Allocations: 731)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 20:52:36 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 3ms (Allocations: 733)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 20:52:44 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 4ms (Allocations: 733)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started GET "/todos/" for 172.22.0.1 at 2021-03-04 20:55:26 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: 8d83612259250682fc5f
+Version: webpack 4.46.0
+Time: 14265ms
+Built at: 03/04/2021 8:55:46 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-380d688fedbf52c48c7b.js  2.93 MiB       application  [emitted] [immutable]  application
+     js/application-380d688fedbf52c48c7b.js.map  3.07 MiB       application  [emitted] [dev]        application
+               js/index-bc546524f8b0f317a56e.js  2.65 MiB             index  [emitted] [immutable]  index
+           js/index-bc546524f8b0f317a56e.js.map  2.75 MiB             index  [emitted] [dev]        index
+    js/server_rendering-66cc26dfae2b646bb4ed.js  2.81 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-66cc26dfae2b646bb4ed.js.map  2.94 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-380d688fedbf52c48c7b.js js/application-380d688fedbf52c48c7b.js.map
+Entrypoint index = js/index-bc546524f8b0f317a56e.js js/index-bc546524f8b0f317a56e.js.map
+Entrypoint server_rendering = js/server_rendering-66cc26dfae2b646bb4ed.js js/server_rendering-66cc26dfae2b646bb4ed.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 93 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20187.8ms | Allocations: 6717)
+Completed 200 OK in 20192ms (Views: 20190.8ms | Allocations: 7266)
+
+
+Started GET "/api/v1/todos.json" for 172.22.0.1 at 2021-03-04 20:55:47 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#index as JSON
+  [1m[36mTodo Load (2.5ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 127ms (Views: 87.3ms | ActiveRecord: 6.0ms | Allocations: 6269)
+
+
+Started GET "/todos/" for 172.22.0.1 at 2021-03-04 20:59:54 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: 14a8a317b8be6baa4606
+Version: webpack 4.46.0
+Time: 16650ms
+Built at: 03/04/2021 9:00:16 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-a9b078b1cf15e16aa446.js  2.93 MiB       application  [emitted] [immutable]  application
+     js/application-a9b078b1cf15e16aa446.js.map  3.07 MiB       application  [emitted] [dev]        application
+               js/index-cf2ab0f79da4a6e0e546.js  2.65 MiB             index  [emitted] [immutable]  index
+           js/index-cf2ab0f79da4a6e0e546.js.map  2.75 MiB             index  [emitted] [dev]        index
+    js/server_rendering-bf15af191811d104b50f.js  2.81 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-bf15af191811d104b50f.js.map  2.94 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-a9b078b1cf15e16aa446.js js/application-a9b078b1cf15e16aa446.js.map
+Entrypoint index = js/index-cf2ab0f79da4a6e0e546.js js/index-cf2ab0f79da4a6e0e546.js.map
+Entrypoint server_rendering = js/server_rendering-bf15af191811d104b50f.js js/server_rendering-bf15af191811d104b50f.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 93 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22663.0ms | Allocations: 6734)
+Completed 200 OK in 22668ms (Views: 22666.5ms | ActiveRecord: 0.0ms | Allocations: 7283)
+
+
+Started GET "/api/v1/todos.json" for 172.22.0.1 at 2021-03-04 21:00:18 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#index as JSON
+  [1m[36mTodo Load (12.3ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 106ms (Views: 49.8ms | ActiveRecord: 29.2ms | Allocations: 6453)
+
+
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 21:03:28 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 4ms (ActiveRecord: 0.0ms | Allocations: 670)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started GET "/todos/" for 172.22.0.1 at 2021-03-04 21:04:53 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: c7e5c1be146943768897
+Version: webpack 4.46.0
+Time: 15016ms
+Built at: 03/04/2021 9:05:14 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-ddd33f86f356abaf0bd4.js  2.93 MiB       application  [emitted] [immutable]  application
+     js/application-ddd33f86f356abaf0bd4.js.map  3.07 MiB       application  [emitted] [dev]        application
+               js/index-617e04ea66623a0200ac.js  2.65 MiB             index  [emitted] [immutable]  index
+           js/index-617e04ea66623a0200ac.js.map  2.75 MiB             index  [emitted] [dev]        index
+    js/server_rendering-ee96e5964e0bbe866333.js  2.81 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-ee96e5964e0bbe866333.js.map  2.94 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-ddd33f86f356abaf0bd4.js js/application-ddd33f86f356abaf0bd4.js.map
+Entrypoint index = js/index-617e04ea66623a0200ac.js js/index-617e04ea66623a0200ac.js.map
+Entrypoint server_rendering = js/server_rendering-ee96e5964e0bbe866333.js js/server_rendering-ee96e5964e0bbe866333.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 93 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21084.6ms | Allocations: 6729)
+Completed 200 OK in 21089ms (Views: 21088.3ms | ActiveRecord: 0.0ms | Allocations: 7278)
+
+
+Started GET "/api/v1/todos.json" for 172.22.0.1 at 2021-03-04 21:05:15 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#index as JSON
+  [1m[36mTodo Load (3.5ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 105ms (Views: 42.0ms | ActiveRecord: 18.5ms | Allocations: 4714)
+
+
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 21:05:17 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 4ms (ActiveRecord: 0.0ms | Allocations: 670)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started GET "/todos/" for 172.22.0.1 at 2021-03-04 21:07:00 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: 08cc135588685dc89b44
+Version: webpack 4.46.0
+Time: 14989ms
+Built at: 03/04/2021 9:07:21 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-017ca135986a714a7787.js  2.93 MiB       application  [emitted] [immutable]  application
+     js/application-017ca135986a714a7787.js.map  3.07 MiB       application  [emitted] [dev]        application
+               js/index-e4292b5b4048d099c3f0.js  2.65 MiB             index  [emitted] [immutable]  index
+           js/index-e4292b5b4048d099c3f0.js.map  2.75 MiB             index  [emitted] [dev]        index
+    js/server_rendering-94683de1b23cd34f76cd.js  2.81 MiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-94683de1b23cd34f76cd.js.map  2.94 MiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-017ca135986a714a7787.js js/application-017ca135986a714a7787.js.map
+Entrypoint index = js/index-e4292b5b4048d099c3f0.js js/index-e4292b5b4048d099c3f0.js.map
+Entrypoint server_rendering = js/server_rendering-94683de1b23cd34f76cd.js js/server_rendering-94683de1b23cd34f76cd.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} {server_rendering} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 301 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} {server_rendering} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 93 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21013.4ms | Allocations: 6718)
+Completed 200 OK in 21022ms (Views: 21018.8ms | ActiveRecord: 0.0ms | Allocations: 7267)
+
+
+Started GET "/api/v1/todos.json" for 172.22.0.1 at 2021-03-04 21:07:22 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#index as JSON
+  [1m[36mTodo Load (1.8ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 35ms (Views: 10.1ms | ActiveRecord: 8.6ms | Allocations: 4155)
+
+
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 21:07:24 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 4ms (ActiveRecord: 0.0ms | Allocations: 670)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 21:07:26 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 4ms (ActiveRecord: 0.0ms | Allocations: 733)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 21:07:31 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 4ms (ActiveRecord: 0.0ms | Allocations: 733)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 21:07:31 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 4ms (ActiveRecord: 0.0ms | Allocations: 731)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 21:11:54 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 3ms (ActiveRecord: 0.0ms | Allocations: 733)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started PATCH "/api/v1/todos/2" for 172.22.0.1 at 2021-03-04 21:12:01 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"2", "name"=>"graduating from college", "is_completed"=>true, "todo"=>{"id"=>"2", "name"=>"graduating from college", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 4ms (ActiveRecord: 0.0ms | Allocations: 733)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started PATCH "/api/v1/todos/1" for 172.22.0.1 at 2021-03-04 21:12:03 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"1", "name"=>"Going around the world", "is_completed"=>true, "todo"=>{"id"=>"1", "name"=>"Going around the world", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 4ms (ActiveRecord: 0.0ms | Allocations: 733)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started GET "/todos/" for 172.22.0.1 at 2021-03-04 21:15:39 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 33)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 97.0ms | Allocations: 5571)
+Completed 200 OK in 102ms (Views: 101.4ms | Allocations: 5955)
+
+
+Started GET "/api/v1/todos.json" for 172.22.0.1 at 2021-03-04 21:15:40 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#index as JSON
+  [1m[36mTodo Load (2.7ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 10.4ms | ActiveRecord: 6.3ms | Allocations: 1458)
+
+
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 21:15:42 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :id[0m
+Completed 404 Not Found in 4ms (ActiveRecord: 0.0ms | Allocations: 730)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started GET "/todos/" for 172.22.0.1 at 2021-03-04 21:18:26 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: ed6cc45a019b9ede88e0
+Version: webpack 4.46.0
+Time: 14459ms
+Built at: 03/04/2021 9:18:46 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-017ca135986a714a7787.js  2.93 MiB       application  [emitted] [immutable]  application
+     js/application-017ca135986a714a7787.js.map  3.07 MiB       application  [emitted] [dev]        application
+               js/index-e4292b5b4048d099c3f0.js  2.65 MiB             index  [emitted] [immutable]  index
+           js/index-e4292b5b4048d099c3f0.js.map  2.75 MiB             index  [emitted] [dev]        index
+    js/server_rendering-1a1396f5f71c261b9d6e.js  4.22 KiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-1a1396f5f71c261b9d6e.js.map  3.93 KiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-017ca135986a714a7787.js js/application-017ca135986a714a7787.js.map
+Entrypoint index = js/index-e4292b5b4048d099c3f0.js js/index-e4292b5b4048d099c3f0.js.map
+Entrypoint server_rendering = js/server_rendering-1a1396f5f71c261b9d6e.js js/server_rendering-1a1396f5f71c261b9d6e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 305 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 93 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20705.9ms | Allocations: 6721)
+Completed 200 OK in 20712ms (Views: 20710.3ms | ActiveRecord: 0.0ms | Allocations: 7270)
+
+
+Started GET "/api/v1/todos.json" for 172.22.0.1 at 2021-03-04 21:18:47 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#index as JSON
+  [1m[36mTodo Load (17.0ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 143ms (Views: 54.7ms | ActiveRecord: 55.4ms | Allocations: 7432)
+
+
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 21:18:49 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>true, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+  [1m[36mTodo Load (1.5ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+  [1m[36mTodo Update (4.9ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = TRUE, `todos`.`updated_at` = '2021-03-04 21:18:49.283311' WHERE `todos`.`id` = 3[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+Completed 200 OK in 41ms (Views: 0.4ms | ActiveRecord: 10.1ms | Allocations: 3464)
+
+
+Started PATCH "/api/v1/todos/2" for 172.22.0.1 at 2021-03-04 21:19:03 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"2", "name"=>"graduating from college", "is_completed"=>true, "todo"=>{"id"=>"2", "name"=>"graduating from college", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+  [1m[36mTodo Load (1.1ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+  [1m[36mTodo Update (1.3ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = TRUE, `todos`.`updated_at` = '2021-03-04 21:19:03.415689' WHERE `todos`.`id` = 2[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+Completed 200 OK in 26ms (Views: 0.8ms | ActiveRecord: 6.4ms | Allocations: 3151)
+
+
+Started PATCH "/api/v1/todos/2" for 172.22.0.1 at 2021-03-04 21:19:03 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"2", "name"=>"graduating from college", "is_completed"=>false, "todo"=>{"id"=>"2", "name"=>"graduating from college", "is_completed"=>false}}
+Can't verify CSRF token authenticity.
+  [1m[36mTodo Load (1.2ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+  [1m[36mTodo Update (1.6ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = FALSE, `todos`.`updated_at` = '2021-03-04 21:19:03.982823' WHERE `todos`.`id` = 2[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+Completed 200 OK in 27ms (Views: 0.4ms | ActiveRecord: 6.5ms | Allocations: 3149)
+
+
+Started PATCH "/api/v1/todos/3" for 172.22.0.1 at 2021-03-04 21:19:04 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"3", "name"=>"publishing a book", "is_completed"=>false, "todo"=>{"id"=>"3", "name"=>"publishing a book", "is_completed"=>false}}
+Can't verify CSRF token authenticity.
+  [1m[36mTodo Load (1.1ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+  [1m[36mTodo Update (1.5ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = FALSE, `todos`.`updated_at` = '2021-03-04 21:19:04.748776' WHERE `todos`.`id` = 3[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+Completed 200 OK in 23ms (Views: 0.4ms | ActiveRecord: 6.2ms | Allocations: 3143)
+
+
+Started DELETE "/api/v1/todos/destroy_all" for 172.22.0.1 at 2021-03-04 21:19:57 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#destroy_all as HTML
+Can't verify CSRF token authenticity.
+  [1m[36mTodo Load (1.9ms)[0m  [1m[34mSELECT `todos`.* FROM `todos`[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:39:in `destroy_all'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:39:in `destroy_all'
+  [1m[36mTodo Destroy (1.4ms)[0m  [1m[31mDELETE FROM `todos` WHERE `todos`.`id` = 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:39:in `destroy_all'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:39:in `destroy_all'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:39:in `destroy_all'
+  [1m[36mTodo Destroy (1.1ms)[0m  [1m[31mDELETE FROM `todos` WHERE `todos`.`id` = 2[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:39:in `destroy_all'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:39:in `destroy_all'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:39:in `destroy_all'
+  [1m[36mTodo Destroy (1.5ms)[0m  [1m[31mDELETE FROM `todos` WHERE `todos`.`id` = 3[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:39:in `destroy_all'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:39:in `destroy_all'
+Completed 204 No Content in 56ms (ActiveRecord: 17.8ms | Allocations: 6600)
+
+
+Started GET "/todos/" for 172.22.0.1 at 2021-03-04 21:59:22 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: 63b7006aa5cabf2172d1
+Version: webpack 4.46.0
+Time: 19165ms
+Built at: 03/04/2021 9:59:49 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-c735dcf631e19c03edd8.js  3.23 MiB       application  [emitted] [immutable]  application
+     js/application-c735dcf631e19c03edd8.js.map   3.4 MiB       application  [emitted] [dev]        application
+               js/index-ce08caf600b0e34ca753.js  2.94 MiB             index  [emitted] [immutable]  index
+           js/index-ce08caf600b0e34ca753.js.map  3.08 MiB             index  [emitted] [dev]        index
+    js/server_rendering-1a1396f5f71c261b9d6e.js  4.22 KiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-1a1396f5f71c261b9d6e.js.map  3.93 KiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-c735dcf631e19c03edd8.js js/application-c735dcf631e19c03edd8.js.map
+Entrypoint index = js/index-ce08caf600b0e34ca753.js js/index-ce08caf600b0e34ca753.js.map
+Entrypoint server_rendering = js/server_rendering-1a1396f5f71c261b9d6e.js js/server_rendering-1a1396f5f71c261b9d6e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 305 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 98 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27065.2ms | Allocations: 6736)
+Completed 200 OK in 27071ms (Views: 27069.4ms | Allocations: 7285)
+
+
+Started GET "/api/v1/todos.json" for 172.22.0.1 at 2021-03-04 21:59:50 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#index as JSON
+  [1m[36mTodo Load (1.7ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 4.2ms | ActiveRecord: 3.0ms | Allocations: 2263)
+
+
+Started GET "/todos/new" for 172.22.0.1 at 2021-03-04 22:01:41 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 33)
+[Webpacker] Compiling...
+Started GET "/todos/new" for 172.22.0.1 at 2021-03-04 22:01:50 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: 3084297ebdfc81f41367
+Version: webpack 4.46.0
+Time: 16289ms
+Built at: 03/04/2021 10:02:03 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-8008604e2762684b2ecc.js  3.23 MiB       application  [emitted] [immutable]  application
+     js/application-8008604e2762684b2ecc.js.map   3.4 MiB       application  [emitted] [dev]        application
+               js/index-2a7c46fadddbd1d384b3.js  2.94 MiB             index  [emitted] [immutable]  index
+           js/index-2a7c46fadddbd1d384b3.js.map  3.08 MiB             index  [emitted] [dev]        index
+    js/server_rendering-1a1396f5f71c261b9d6e.js  4.22 KiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-1a1396f5f71c261b9d6e.js.map  3.93 KiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-8008604e2762684b2ecc.js js/application-8008604e2762684b2ecc.js.map
+Entrypoint index = js/index-2a7c46fadddbd1d384b3.js js/index-2a7c46fadddbd1d384b3.js.map
+Entrypoint server_rendering = js/server_rendering-1a1396f5f71c261b9d6e.js js/server_rendering-1a1396f5f71c261b9d6e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 305 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 98 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22692.7ms | Allocations: 10045)
+Completed 200 OK in 22697ms (Views: 22696.2ms | ActiveRecord: 0.0ms | Allocations: 10590)
+
+
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 33)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 87.7ms | Allocations: 5536)
+Completed 200 OK in 93ms (Views: 91.6ms | ActiveRecord: 0.0ms | Allocations: 6081)
+
+
+Started GET "/todos/new" for 172.22.0.1 at 2021-03-04 22:03:06 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: 599ad704fe4460c2ccba
+Version: webpack 4.46.0
+Time: 16492ms
+Built at: 03/04/2021 10:03:29 PM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-886112e02a9cb43934b3.js  3.23 MiB       application  [emitted] [immutable]  application
+     js/application-886112e02a9cb43934b3.js.map   3.4 MiB       application  [emitted] [dev]        application
+               js/index-fd71f1b6812817010517.js  2.94 MiB             index  [emitted] [immutable]  index
+           js/index-fd71f1b6812817010517.js.map  3.08 MiB             index  [emitted] [dev]        index
+    js/server_rendering-1a1396f5f71c261b9d6e.js  4.22 KiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-1a1396f5f71c261b9d6e.js.map  3.93 KiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-886112e02a9cb43934b3.js js/application-886112e02a9cb43934b3.js.map
+Entrypoint index = js/index-fd71f1b6812817010517.js js/index-fd71f1b6812817010517.js.map
+Entrypoint server_rendering = js/server_rendering-1a1396f5f71c261b9d6e.js js/server_rendering-1a1396f5f71c261b9d6e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 305 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 98 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23132.2ms | Allocations: 6723)
+Completed 200 OK in 23138ms (Views: 23136.9ms | ActiveRecord: 0.0ms | Allocations: 7271)
+
+
+Started GET "/todos/new" for 172.22.0.1 at 2021-03-05 01:31:08 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: 20a8838b20471d7ba39e
+Version: webpack 4.46.0
+Time: 18804ms
+Built at: 03/05/2021 1:31:34 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-f22e928f3ecfbef3e6f4.js  3.24 MiB       application  [emitted] [immutable]  application
+     js/application-f22e928f3ecfbef3e6f4.js.map   3.4 MiB       application  [emitted] [dev]        application
+               js/index-0d7b1896702d707d2c11.js  2.96 MiB             index  [emitted] [immutable]  index
+           js/index-0d7b1896702d707d2c11.js.map  3.08 MiB             index  [emitted] [dev]        index
+    js/server_rendering-1a1396f5f71c261b9d6e.js  4.22 KiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-1a1396f5f71c261b9d6e.js.map  3.93 KiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-f22e928f3ecfbef3e6f4.js js/application-f22e928f3ecfbef3e6f4.js.map
+Entrypoint index = js/index-0d7b1896702d707d2c11.js js/index-0d7b1896702d707d2c11.js.map
+Entrypoint server_rendering = js/server_rendering-1a1396f5f71c261b9d6e.js js/server_rendering-1a1396f5f71c261b9d6e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 305 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 98 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26437.5ms | Allocations: 6741)
+Completed 200 OK in 26443ms (Views: 26442.0ms | Allocations: 7290)
+
+
+Started GET "/api/v1/todos.json" for 172.22.0.1 at 2021-03-05 01:31:37 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#index as JSON
+  [1m[36mTodo Load (1.9ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 5.1ms | ActiveRecord: 4.7ms | Allocations: 2623)
+
+
+Started GET "/todos" for 172.22.0.1 at 2021-03-05 01:32:11 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 33)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 78.7ms | Allocations: 5568)
+Completed 200 OK in 84ms (Views: 82.6ms | ActiveRecord: 0.0ms | Allocations: 5948)
+
+
+Started GET "/api/v1/todos.json" for 172.22.0.1 at 2021-03-05 01:32:12 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#index as JSON
+  [1m[36mTodo Load (2.4ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 4.8ms | ActiveRecord: 2.4ms | Allocations: 975)
+
+
+Started POST "/api/v1/todos" for 172.22.0.1 at 2021-03-05 01:32:56 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#create as HTML
+  Parameters: {"name"=>"Finish Todo app development", "todo"=>{"name"=>"Finish Todo app development"}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+  [1m[36mTodo Create (1.2ms)[0m  [1m[32mINSERT INTO `todos` (`name`, `created_at`, `updated_at`) VALUES ('Finish Todo app development', '2021-03-05 01:32:56.209361', '2021-03-05 01:32:56.209361')[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+Completed 200 OK in 25ms (Views: 0.3ms | ActiveRecord: 9.3ms | Allocations: 4482)
+
+
+Started GET "/api/v1/todos.json" for 172.22.0.1 at 2021-03-05 01:32:56 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#index as JSON
+  [1m[36mTodo Load (1.4ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 9.1ms | ActiveRecord: 1.4ms | Allocations: 1129)
+
+
+Started GET "/todos" for 172.22.0.1 at 2021-03-05 01:33:15 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 33)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 87.8ms | Allocations: 5572)
+Completed 200 OK in 91ms (Views: 90.6ms | ActiveRecord: 0.0ms | Allocations: 5952)
+
+
+Started GET "/api/v1/todos.json" for 172.22.0.1 at 2021-03-05 01:33:16 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#index as JSON
+  [1m[36mTodo Load (2.0ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 2.0ms | Allocations: 1053)
+
+
+Started GET "/todos/4/edit" for 172.22.0.1 at 2021-03-05 01:38:18 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Parameters: {"id"=>"4"}
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: f82b4ba7fa6973ef199c
+Version: webpack 4.46.0
+Time: 15425ms
+Built at: 03/05/2021 1:38:40 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-6312c0cd74b520065eac.js  3.24 MiB       application  [emitted] [immutable]  application
+     js/application-6312c0cd74b520065eac.js.map   3.4 MiB       application  [emitted] [dev]        application
+               js/index-a43a48b3d8da44e1b979.js  2.96 MiB             index  [emitted] [immutable]  index
+           js/index-a43a48b3d8da44e1b979.js.map  3.08 MiB             index  [emitted] [dev]        index
+    js/server_rendering-1a1396f5f71c261b9d6e.js  4.22 KiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-1a1396f5f71c261b9d6e.js.map  3.93 KiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-6312c0cd74b520065eac.js js/application-6312c0cd74b520065eac.js.map
+Entrypoint index = js/index-a43a48b3d8da44e1b979.js js/index-a43a48b3d8da44e1b979.js.map
+Entrypoint server_rendering = js/server_rendering-1a1396f5f71c261b9d6e.js js/server_rendering-1a1396f5f71c261b9d6e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 305 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 98 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21445.7ms | Allocations: 6721)
+Completed 200 OK in 21452ms (Views: 21450.5ms | ActiveRecord: 0.0ms | Allocations: 7269)
+
+
+Started GET "/api/v1/todos/4" for 172.22.0.1 at 2021-03-05 01:38:41 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTodo Load (1.6ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:8:in `show'
+Completed 200 OK in 41ms (Views: 0.8ms | ActiveRecord: 8.5ms | Allocations: 3859)
+
+
+Started PATCH "/api/v1/todos/4" for 172.22.0.1 at 2021-03-05 01:38:49 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"4", "name"=>"Finish Todo app development", "is_completed"=>true, "todo"=>{"id"=>"4", "name"=>"Finish Todo app development", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+  [1m[36mTodo Load (0.9ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+  [1m[36mTodo Update (1.1ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = TRUE, `todos`.`updated_at` = '2021-03-05 01:38:49.688222' WHERE `todos`.`id` = 4[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+Completed 200 OK in 24ms (Views: 0.4ms | ActiveRecord: 6.0ms | Allocations: 3165)
+
+
+Started PATCH "/api/v1/todos/4" for 172.22.0.1 at 2021-03-05 01:38:51 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"4", "name"=>"Finish Todo app development", "is_completed"=>false, "todo"=>{"id"=>"4", "name"=>"Finish Todo app development", "is_completed"=>false}}
+Can't verify CSRF token authenticity.
+  [1m[36mTodo Load (1.1ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+  [1m[36mTodo Update (1.3ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = FALSE, `todos`.`updated_at` = '2021-03-05 01:38:51.075376' WHERE `todos`.`id` = 4[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+Completed 200 OK in 24ms (Views: 0.4ms | ActiveRecord: 6.2ms | Allocations: 3125)
+
+
+Started PATCH "/api/v1/todos/4" for 172.22.0.1 at 2021-03-05 01:38:51 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"4", "name"=>"Finish Todo app development", "is_completed"=>true, "todo"=>{"id"=>"4", "name"=>"Finish Todo app development", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+  [1m[36mTodo Load (1.4ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+  [1m[36mTodo Update (1.3ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = TRUE, `todos`.`updated_at` = '2021-03-05 01:38:51.317564' WHERE `todos`.`id` = 4[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+Completed 200 OK in 26ms (Views: 0.5ms | ActiveRecord: 7.7ms | Allocations: 3145)
+
+
+Started PATCH "/api/v1/todos/4" for 172.22.0.1 at 2021-03-05 01:38:51 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"4", "name"=>"Finish Todo app development", "is_completed"=>false, "todo"=>{"id"=>"4", "name"=>"Finish Todo app development", "is_completed"=>false}}
+Can't verify CSRF token authenticity.
+  [1m[36mTodo Load (1.2ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+  [1m[36mTodo Update (1.3ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = FALSE, `todos`.`updated_at` = '2021-03-05 01:38:51.519436' WHERE `todos`.`id` = 4[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+Completed 200 OK in 23ms (Views: 0.4ms | ActiveRecord: 6.3ms | Allocations: 3145)
+
+
+Started PATCH "/api/v1/todos/4" for 172.22.0.1 at 2021-03-05 01:38:52 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"4", "name"=>"Finish Todo app development", "is_completed"=>true, "todo"=>{"id"=>"4", "name"=>"Finish Todo app development", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+  [1m[36mTodo Load (1.0ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+  [1m[36mTodo Update (1.4ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = TRUE, `todos`.`updated_at` = '2021-03-05 01:38:52.252965' WHERE `todos`.`id` = 4[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+Completed 200 OK in 24ms (Views: 0.4ms | ActiveRecord: 6.6ms | Allocations: 3146)
+
+
+Started PATCH "/api/v1/todos/4" for 172.22.0.1 at 2021-03-05 01:38:52 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"4", "name"=>"Finish Todo app development", "is_completed"=>false, "todo"=>{"id"=>"4", "name"=>"Finish Todo app development", "is_completed"=>false}}
+Can't verify CSRF token authenticity.
+  [1m[36mTodo Load (0.9ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+  [1m[36mTodo Update (1.2ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = FALSE, `todos`.`updated_at` = '2021-03-05 01:38:52.865675' WHERE `todos`.`id` = 4[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+Completed 200 OK in 23ms (Views: 0.4ms | ActiveRecord: 5.7ms | Allocations: 3145)
+
+
+Started PATCH "/api/v1/todos/4" for 172.22.0.1 at 2021-03-05 01:38:53 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"4", "name"=>"Finish Todo app development", "is_completed"=>true, "todo"=>{"id"=>"4", "name"=>"Finish Todo app development", "is_completed"=>true}}
+Can't verify CSRF token authenticity.
+  [1m[36mTodo Load (1.1ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+  [1m[36mTodo Update (1.5ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = TRUE, `todos`.`updated_at` = '2021-03-05 01:38:53.604993' WHERE `todos`.`id` = 4[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:23:in `update'
+Completed 200 OK in 26ms (Views: 0.5ms | ActiveRecord: 6.7ms | Allocations: 3128)
+
+
+Started GET "/todos/4/edit" for 172.22.0.1 at 2021-03-05 01:40:00 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SiteController#index as HTML
+  Parameters: {"id"=>"4"}
+  Rendering layout layouts/application.html.erb
+  Rendering site/index.html.erb within layouts/application
+  Rendered site/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 33)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /app/public/packs
+[Webpacker] Hash: ae23b2fba1320ea36f6d
+Version: webpack 4.46.0
+Time: 15902ms
+Built at: 03/05/2021 1:40:22 AM
+                                          Asset      Size            Chunks                         Chunk Names
+         js/application-7e20e57509f96a158def.js  3.24 MiB       application  [emitted] [immutable]  application
+     js/application-7e20e57509f96a158def.js.map   3.4 MiB       application  [emitted] [dev]        application
+               js/index-00348a43ed4a265750e1.js  2.96 MiB             index  [emitted] [immutable]  index
+           js/index-00348a43ed4a265750e1.js.map  3.08 MiB             index  [emitted] [dev]        index
+    js/server_rendering-1a1396f5f71c261b9d6e.js  4.22 KiB  server_rendering  [emitted] [immutable]  server_rendering
+js/server_rendering-1a1396f5f71c261b9d6e.js.map  3.93 KiB  server_rendering  [emitted] [dev]        server_rendering
+                                  manifest.json  1.01 KiB                    [emitted]              
+Entrypoint application = js/application-7e20e57509f96a158def.js js/application-7e20e57509f96a158def.js.map
+Entrypoint index = js/index-00348a43ed4a265750e1.js js/index-00348a43ed4a265750e1.js.map
+Entrypoint server_rendering = js/server_rendering-1a1396f5f71c261b9d6e.js js/server_rendering-1a1396f5f71c261b9d6e.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/components sync recursive ^\.\/.*$] ./app/javascript/components sync ^\.\/.*$ 304 bytes {application} [built]
+[./app/javascript/packs/application.js] 712 bytes {application} [built]
+[./app/javascript/packs/index.jsx] 671 bytes {index} [built]
+[./app/javascript/packs/server_rendering.js] 305 bytes {server_rendering} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} {index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 98 hidden modules
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22209.9ms | Allocations: 6730)
+Completed 200 OK in 22222ms (Views: 22214.3ms | ActiveRecord: 0.0ms | Allocations: 7279)
+
+
+Started GET "/api/v1/todos/4" for 172.22.0.1 at 2021-03-05 01:40:23 +0000
+Cannot render console from 172.22.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Api::V1::TodosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTodo Load (1.0ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:8:in `show'
+Completed 200 OK in 31ms (Views: 1.2ms | ActiveRecord: 5.5ms | Allocations: 3879)
+
+
